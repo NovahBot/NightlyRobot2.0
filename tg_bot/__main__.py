@@ -37,7 +37,8 @@ HIT HELP FOR COMMANDS  /help
 I AM COMPLETELY OPEN SOURCE
 
 
-"""
+"""update.effective_message.reply_photo(img,text, reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN)
+ 
 
 HELP_STRINGS = """
 
