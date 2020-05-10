@@ -15,12 +15,12 @@ from telegram.ext.dispatcher import run_async, DispatcherHandlerStop, Dispatcher
 from telegram.utils.helpers import escape_markdown
 from alluka import dispatcher, updater, TOKEN, WEBHOOK, SUDO_USERS, OWNER_ID, CERT_PATH, PORT, URL, LOGGER, \
     ALLOW_EXCL, TOKEN, tbot
-from alluka.modules import ALL_MODULES
-from alluka.modules.helper_funcs.chat_status import is_user_admin
-from alluka.modules.helper_funcs.misc import paginate_modules
-import alluka.modules.helper_funcs.panel_string as HELP_PANEL_STRING
-from alluka.modules.connection import connected
-from alluka.modules.connection import connect_button
+from tg_bot.modules import ALL_MODULES
+from tg_bot.modules.helper_funcs.chat_status import is_user_admin
+from tg_bot.modules.helper_funcs.misc import paginate_modules
+import tg_bot.modules.helper_funcs.panel_string as HELP_PANEL_STRING
+from tg_bot.modules.connection import connected
+from tg_bot.modules.connection import connect_button
 
 
 VERSION = "5.5.2"
