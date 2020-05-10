@@ -329,8 +329,8 @@ def adminlist(bot: Bot, update: Update):
         user = admin.user
         status = admin.status
         name = "[{}](tg://user?id={})".format(user.first_name + " " + (user.last_name or ""), user.id)
-        if user.username:
-            name = name = escape_markdown("@" + user.username)
+        # if user.username:
+            # name = name = escape_markdown("@" + user.username)
         if status == "creator":
             text += "\n 🔱 Creator:"
             text += "\n` • `{} \n\n • *Administrators*:".format(name)
@@ -339,7 +339,7 @@ def adminlist(bot: Bot, update: Update):
         status = admin.status
         chat = update.effective_chat
         count = chat.get_members_count()
-        name = "`{}`".format(user.first_name + (user.last_name or ""), user.id)
+        name = "[{}](tg://user?id={})".format(user.first_name + " " + (user.last_name or ""), user.id)
         # if user.username:
             # name = escape_markdown("@" + user.username)
             
@@ -353,7 +353,7 @@ def adminlist(bot: Bot, update: Update):
 
 def __chat_settings__(chat_id, user_id):
     return "You are *admin*: `{}`".format(
-        dispatcher.bot.get_chat_member(chat_id, user_id).status in ("administrator", "creator"), user.id)
+        dispatcher.bot.get_chat_member(chat_id, user_id).status in ("administrator", "creator"))
 
 
 __help__ = """
