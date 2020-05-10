@@ -27,7 +27,7 @@ SFW_STRINGS = (
   )
 
 @run_async
-def sing(bot: Bot, update: Update):
+def song(bot: Bot, update: Update):
     bot.sendChatAction(update.effective_chat.id, "typing") # Bot typing before send messages
     message = update.effective_message
     if message.reply_to_message:
@@ -36,11 +36,11 @@ def sing(bot: Bot, update: Update):
       message.reply_text(random.choice(SFW_STRINGS))
 
 __help__ = """
-- /sing  ചില മലയാളം പാട്ടുകളുടെ ആദ്യ വരികൾ ലഭിക്കും.
+- /song  ചില മലയാളം പാട്ടുകളുടെ ആദ്യ വരികൾ ലഭിക്കും.(old)
 """
 
 __mod_name__ = "Song Commands"
 
-SING_HANDLER = DisableAbleCommandHandler("sing", sing)
+SONG_HANDLER = DisableAbleCommandHandler("song", song)
 
-dispatcher.add_handler(SING_HANDLER)
+dispatcher.add_handler(SONG_HANDLER)
