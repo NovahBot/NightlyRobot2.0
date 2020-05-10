@@ -339,9 +339,9 @@ def adminlist(bot: Bot, update: Update):
         status = admin.status
         chat = update.effective_chat
         count = chat.get_members_count()
-        name = "[{}](tg://user?id={})".format(user.first_name + " " + (user.last_name or ""), user.id)
+        name = "`{}`".format(user.first_name + (user.last_name or ""))
         if user.username:
-            name = escape_markdown(user.first_name +  user.last_name)
+            name = escape_markdown("@" + user.username)
             
         if status == "administrator":
             text += "\n`👮🏻 `{}".format(name)
