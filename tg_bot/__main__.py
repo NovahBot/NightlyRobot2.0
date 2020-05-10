@@ -48,7 +48,7 @@ GDPR = []
 
 
 for module_name in ALL_MODULES:
-    imported_module = importlib.import_module("alluka.modules." + module_name)
+    imported_module = importlib.import_module("tg_bot.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
         imported_module.__mod_name__ = imported_module.__name__
 
@@ -507,14 +507,14 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("alluka running...")
+        LOGGER.info("Bot is running...")
         updater.start_polling(timeout=15, read_latency=4)
 
   
-    if len(argv) not in (1, 3, 4):
-        tbot.disconnect()
-    else:
-        tbot.run_until_disconnected()
+    # if len(argv) not in (1, 3, 4):
+        # tbot.disconnect()
+    # else:
+        # tbot.run_until_disconnected()
 
     updater.idle()
 
@@ -576,6 +576,6 @@ def process_update(self, update):
 
 if __name__ == '__main__':
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
-    tbot.start(bot_token=TOKEN)
+    # tbot.start(bot_token=TOKEN)
     main()
-    LOGGER.info("Successfully loaded")
+    # LOGGER.info("Successfully loaded")
