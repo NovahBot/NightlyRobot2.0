@@ -79,6 +79,9 @@ DATA_EXPORT = []
 CHAT_SETTINGS = {}
 USER_SETTINGS = {}
 
+
+img = "https://telegra.ph/file/cf45a9fc7007f599329bf.jpg"
+
 for module_name in ALL_MODULES:
     imported_module = importlib.import_module("tg_bot.modules." + module_name)
     if not hasattr(imported_module, "__mod_name__"):
@@ -171,6 +174,9 @@ def send_start(bot, update):
         query.message.delete()
     except:
         Pass
+
+    update.effective_message.reply_photo(img,text, reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN)
+ 
 
 
 # for test purposes
