@@ -148,7 +148,6 @@ DEV_USERS.add(988452336)
 
 updater = tg.Updater(TOKEN, workers=WORKERS)
 dispatcher = updater.dispatcher
-tbot = TelegramClient("tg_bot", API_KEY, API_HASH)
 
 SUDO_USERS = list(SUDO_USERS) + list(DEV_USERS)
 DEV_USERS = list(DEV_USERS)
