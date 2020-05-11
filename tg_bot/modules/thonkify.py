@@ -58,6 +58,7 @@ def thonk(bot: Bot, update: Update):
 
 
 __help__ = """
+   /thonk : creates something
  thonkify very imp
 """
 __mod_name__ = "Thonkify"
