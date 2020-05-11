@@ -10,7 +10,7 @@ from tg_bot import dispatcher
 from tg_bot.modules.helper_funcs.filters import CustomFilters
 
 
-@spamcheck
+
 @run_async
 def thonkify(update, context):
     args = context.args
