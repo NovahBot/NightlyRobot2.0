@@ -55,4 +55,4 @@ __mod_name__ = "Killing Commands"
 
 Q_HANDLER = DisableAbleCommandHandler("q", q)
 
-dispatcher.add_handler(q_HANDLER)
+dispatcher.add_handler(Q_HANDLER)
