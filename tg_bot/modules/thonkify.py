@@ -11,7 +11,7 @@ from tg_bot import dispatcher
 
 
 @run_async
-def thonkify(bot: Bot, update: Update):
+def thonk(bot: Bot, update: Update):
     from tg_bot.modules.thonkify_dict import thonkifydict
 
     message = update.effective_message
@@ -59,9 +59,9 @@ def thonkify(bot: Bot, update: Update):
 
 __help__ = """
  thonkify very imp
- made by @rupansh and @devrism :D
 """
+__mod_name__ = "Thonkify"
 
-THONKIFY_HANDLER = DisableAbleCommandHandler("thonkify", thonkify, admin_ok=True)
-dispatcher.add_handler(THONKIFY_HANDLER)
+THONK_HANDLER = DisableAbleCommandHandler("thonk", thonk, admin_ok=True)
+dispatcher.add_handler(THONK_HANDLER)
 
