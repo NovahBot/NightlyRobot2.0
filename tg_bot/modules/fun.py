@@ -92,7 +92,7 @@ def abuse(bot: Bot, update: Update):
     reply_text(random.choice(fun_strings.ABUSE_STRINGS))
 
 @run_async
-def sing(bot: Bot, update: Update):
+def song(bot: Bot, update: Update):
     reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
     reply_text(random.choice(fun_strings.SING_STRINGS))
 
@@ -161,7 +161,7 @@ BLUETEXT_HANDLER = DisableAbleCommandHandler("bluetext", bluetext)
 RLG_HANDLER = DisableAbleCommandHandler("rlg", rlg)
 DECIDE_HANDLER = DisableAbleCommandHandler("decide", decide)
 TABLE_HANDLER = DisableAbleCommandHandler("table", table)
-SING_HANDLER = DisableAbleCommandHandler("sing", sing)
+SONG_HANDLER = DisableAbleCommandHandler("song", song)
 KILL_HANDLER = DisableAbleCommandHandler("kill", kill)
 
 dispatcher.add_handler(ABUSE_HANDLER)
@@ -174,9 +174,9 @@ dispatcher.add_handler(BLUETEXT_HANDLER)
 dispatcher.add_handler(RLG_HANDLER)
 dispatcher.add_handler(DECIDE_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
-dispatcher.add_handler(SING_HANDLER)
+dispatcher.add_handler(SONG_HANDLER)
 dispatcher.add_handler(KILL_HANDLER)
 
 __mod_name__ = "Fun"
-__command_list__ = ["abuse", "runs", "slap", "roll", "toss", "shrug", "bluetext", "rlg", "decide", "table","sing","kill"]
-__handlers__ = [ABUSE_HANDLER, RUNS_HANDLER, SLAP_HANDLER, ROLL_HANDLER, TOSS_HANDLER, SHRUG_HANDLER, BLUETEXT_HANDLER, RLG_HANDLER, DECIDE_HANDLER, TABLE_HANDLER, SING_HANDLER,KILL_HANDLER]
+__command_list__ = ["abuse", "runs", "slap", "roll", "toss", "shrug", "bluetext", "rlg", "decide", "table","song","kill"]
+__handlers__ = [ABUSE_HANDLER, RUNS_HANDLER, SLAP_HANDLER, ROLL_HANDLER, TOSS_HANDLER, SHRUG_HANDLER, BLUETEXT_HANDLER, RLG_HANDLER, DECIDE_HANDLER, TABLE_HANDLER, SONG_HANDLER,KILL_HANDLER]
