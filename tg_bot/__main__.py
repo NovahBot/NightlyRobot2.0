@@ -147,7 +147,7 @@ def send_start(bot, update):
     keyboard = [[InlineKeyboardButton(text="❓ Help", callback_data="help_back"),InlineKeyboardButton(text="⚙️ Connect Group", callback_data="main_connect")]]
     keyboard += [[InlineKeyboardButton(text="🔌 Add me",url="http://t.me/zoldycktmbot?startgroup=true"),InlineKeyboardButton(text="👤 Contact creator",url="https://telegram.dog/zerotwopmbot")]]
 
-    update.effective_message.reply_photo(HELP_PANEL_STRING.ALLUKA_IMG,text.format(escape_markdown(first_name), bot.first_name)), reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN)
+    update.effective_message.reply_photo(HELP_PANEL_STRING.ALLUKA_IMG,text.format(escape_markdown(first_name), escape_markdown(bot.first_name)), reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN)
 
 
 def m_connect_button(bot, update):
