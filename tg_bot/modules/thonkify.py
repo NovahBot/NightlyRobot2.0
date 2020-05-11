@@ -5,7 +5,7 @@ from io import BytesIO
 from PIL import Image
 from telegram import Message, Update, Bot, User
 from telegram.ext import run_async, CommandHandler
-from tg_bot import dispatcher, spamcheck
+from tg_bot import dispatcher
 from tg_bot.modules.languages import tl
 from tg_bot.modules.helper_funcs.filters import CustomFilters
 
