@@ -39,7 +39,7 @@ SFW_STRINGS = (
   )
 
 @run_async
-def kill(bot: Bot, update: Update):
+def q(bot: Bot, update: Update):
     bot.sendChatAction(update.effective_chat.id, "typing") # Bot typing before send messages
     message = update.effective_message
     if message.reply_to_message:
@@ -48,11 +48,11 @@ def kill(bot: Bot, update: Update):
       message.reply_text(random.choice(SFW_STRINGS))
 
 __help__ = """
-- /kill  😩
+- /q  😩
 """
 
 __mod_name__ = "Killing Commands"
 
-KILL_HANDLER = DisableAbleCommandHandler("kill", kill)
+Q_HANDLER = DisableAbleCommandHandler("q", q)
 
-dispatcher.add_handler(KILL_HANDLER)
+dispatcher.add_handler(q_HANDLER)
