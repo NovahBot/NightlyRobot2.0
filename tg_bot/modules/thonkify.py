@@ -15,7 +15,7 @@ from tg_bot.modules.helper_funcs.filters import CustomFilters
 def thonkify(update, context):
     args = context.args
 
-    from eleven.modules.thonkify_dict import thonkifydict
+    from tg_bot.modules.thonkify_dict import thonkifydict
 
     chat = update.effective_chat
     message = update.effective_message
