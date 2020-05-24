@@ -130,7 +130,7 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             send_start(bot, update)
     else:
-        update.effective_message.reply_text("Yo, whadup? 🙂")
+        update.effective_message.reply_text("വേറെ ഒരു പണിയും ഇല്ലേ നിനക്ക്‌ ഒന്നും...😎")
 
 def send_start(bot, update):
     #Try to remove old message
@@ -145,8 +145,8 @@ def send_start(bot, update):
     text += "\n𝑀𝑦 𝑁𝑎𝑚𝑒 𝑖𝑠 {}... 𝐴 𝑃𝑜𝑤𝑒𝑟𝑓𝑢𝑙 𝑇𝑒𝑙𝑒𝑔𝑟𝑎𝑚 𝑃𝑟𝑜𝐵𝑜𝑡 𝑤𝑖𝑡ℎ 𝑙𝑎𝑡𝑒𝑠𝑡 𝑓𝑒𝑎𝑡𝑢𝑟𝑒𝑠 𝑎𝑛𝑑 𝑒𝑎𝑠𝑖𝑒𝑟 𝑐𝑜𝑚𝑚𝑎𝑛𝑑𝑠.... 𝑇ℎ𝑒 𝑛𝑖𝑔ℎ𝑡 𝑖𝑠 𝑓𝑢𝑙𝑙 𝑜𝑓 𝑑𝑎𝑟𝑘 𝑎𝑛𝑑 𝑡𝑒𝑟𝑟𝑜𝑟𝑠..." 
     text += "\n\n𝐅𝐞𝐞𝐥 𝐟𝐫𝐞𝐞 𝐭𝐨 𝐠𝐞𝐭 𝐦𝐞 𝐢𝐧𝐭𝐨 𝐲𝐨𝐮𝐫 𝐠𝐫𝐨𝐮𝐩𝐬..."  
 
-    keyboard = [[InlineKeyboardButton(text="💠Help💠", callback_data="help_back"),InlineKeyboardButton(text="⚔️ Connect Group ⚔️", callback_data="main_connect")]]
-    keyboard += [[InlineKeyboardButton(text="👿Add Me😈",url="http://t.me/zoldycktmbot?startgroup=true"),InlineKeyboardButton(text="☣️Owner☣️",url="https://telegram.dog/Imperialxx")]]
+    keyboard = [[InlineKeyboardButton(text="🔰Help", callback_data="help_back"),InlineKeyboardButton(text="⚔️ Connect Group ⚔️", callback_data="main_connect")]]
+    keyboard += [[InlineKeyboardButton(text="💠Add Me💠",url="http://t.me/zoldycktmbot?startgroup=true"),InlineKeyboardButton(text="♻️Owner",url="https://telegram.dog/Imperialxx")]]
 
     update.effective_message.reply_photo(HELP_PANEL_STRING.ALLUKA_IMG,text.format(escape_markdown(first_name), escape_markdown(bot.first_name)), reply_markup=InlineKeyboardMarkup(keyboard), parse_mode=ParseMode.MARKDOWN)
 
