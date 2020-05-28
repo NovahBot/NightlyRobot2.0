@@ -3,8 +3,8 @@ from typing import List
 from telegram import Bot, Update
 from telegram.ext import run_async, Filters
  
-from alluka import dispatcher
-from alluka.modules.disable import DisableAbleCommandHandler
+from tg_bot import dispatcher
+from tg_bot.modules.disable import DisableAbleCommandHandler
  
 normiefont = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
 boxfont = ['🅰','🅱','🅲','🅳','🅴','🅵','🅶','🅷','🅸','🅹','🅺','🅻','🅼','🅽','🅾','🅿','🆀','🆁','🆂','🆃','🆄','🆅','🆆','🆇','🆈','🆉']
